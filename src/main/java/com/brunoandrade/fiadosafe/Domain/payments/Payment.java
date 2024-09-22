@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class Payment {
 
     @Id
-    private Long id;
+    private String id;
     private Double amount;
     private LocalDate paymentDate;
     private Client client;

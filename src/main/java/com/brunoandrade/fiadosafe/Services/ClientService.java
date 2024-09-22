@@ -4,8 +4,10 @@ import com.brunoandrade.fiadosafe.Domain.clients.Client;
 import com.brunoandrade.fiadosafe.Domain.clients.ClientDTO;
 import com.brunoandrade.fiadosafe.Domain.clients.ClientMapper;
 import com.brunoandrade.fiadosafe.Domain.clients.exceptions.ClientNotFoundException;
+import com.brunoandrade.fiadosafe.Domain.payments.Payment;
 import com.brunoandrade.fiadosafe.Domain.purchases.Purchase;
 import com.brunoandrade.fiadosafe.repositories.ClientRepository;
+import com.brunoandrade.fiadosafe.repositories.PaymentRepository;
 import com.brunoandrade.fiadosafe.repositories.PurchaseRepository;
 import org.springframework.stereotype.Service;
 
@@ -16,16 +18,18 @@ import java.util.Optional;
 public class ClientService {
     private final ClientRepository clientRepository;
     private final PurchaseRepository purchaseRepository;
+    private final PaymentRepository paymentRepository;
 
     private final ClientMapper clientMapper;
 
-    public ClientService(ClientRepository clientRepository, PurchaseRepository purchaseRepository, ClientMapper clientMapper) {
+    public ClientService(ClientRepository clientRepository, PurchaseRepository purchaseRepository, PaymentRepository paymentRepository, ClientMapper clientMapper) {
         this.clientRepository = clientRepository;
         this.purchaseRepository = purchaseRepository;
+        this.paymentRepository = paymentRepository;
         this.clientMapper = clientMapper;
     }
 
-    public Client insert(ClientDTO clientData){
+    public Client insert(ClientDTO clientData) {
         Client newClient = new Client(clientData);
 
         this.clientRepository.save(newClient);
@@ -33,7 +37,7 @@ public class ClientService {
         return newClient;
     }
 
-    public List<Client> getAll(){
+    public List<Client> getAll() {
         return this.clientRepository.findAll();
     }
 
@@ -41,7 +45,7 @@ public class ClientService {
         return this.clientRepository.findById(id);
     }
 
-    public Client update(String id, ClientDTO clientData){
+    public Client update(String id, ClientDTO clientData) {
         Client client = this.clientRepository
                 .findById(id)
                 .orElseThrow(ClientNotFoundException::new);
@@ -53,7 +57,7 @@ public class ClientService {
         return client;
     }
 
-    public void delete(String id){
+    public void delete(String id) {
         Client client = this.clientRepository
                 .findById(id)
                 .orElseThrow(ClientNotFoundException::new);
@@ -62,11 +66,15 @@ public class ClientService {
     }
 
     public Double calculateTotalDebt(String clientId) {
-        List<Purchase> purchases = purchaseRepository.findAllByClientId(clientId);
-        return purchases.stream()
-                .mapToDouble(Purchase::getPrice)
-                .sum();
+        List<Payment> payments = paymentRepository.findPaymentsByClientId(clientId);
+        List<Purchase> purchases = purchaseRepository.findPurchasesByClientId(clientId);
+
+        double totalPayments = payments.stream().mapToDouble(Payment::getAmount).sum();
+        double totalPurchases = purchases.stream().mapToDouble(Purchase::getPrice).sum();
+
+        return totalPurchases - totalPayments;
     }
+
 
     public void updateClientDebt(String clientId) {
         Double totalDebt = calculateTotalDebt(clientId);

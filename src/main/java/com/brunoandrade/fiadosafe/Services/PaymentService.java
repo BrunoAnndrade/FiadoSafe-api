@@ -32,6 +32,9 @@ public class PaymentService {
             client.setTotalDebt(0.0);
         }
 
+        Double currentDebt = client.getTotalDebt() ;
+        client.setTotalDebt(currentDebt - newPayment.getAmount());
+
         this.paymentRepository.save(newPayment);
 
         clientService.updateClientDebt(client.getId());
