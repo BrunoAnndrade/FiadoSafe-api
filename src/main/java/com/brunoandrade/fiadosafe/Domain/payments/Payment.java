@@ -20,4 +20,9 @@ public class Payment {
     private Double amount;
     private LocalDate paymentDate;
     private Client client;
+
+    public Payment(PaymentDTO data) {
+        this.amount = data.amount();
+        this.paymentDate = data.paymentDate();
+    }
 }
