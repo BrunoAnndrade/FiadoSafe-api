@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.Domain.payments.exception;
+package com.brunoandrade.fiadosafe.Domain.payments;
 
 public class PaymentNotFoundException  extends RuntimeException{
 }

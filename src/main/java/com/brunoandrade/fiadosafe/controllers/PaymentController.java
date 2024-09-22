@@ -29,4 +29,10 @@ public class PaymentController {
         List<Payment> paymentList = this.paymentService.getAllPayments();
         return ResponseEntity.ok().body(paymentList);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Payment> updatePayment(@PathVariable("id") String id, @RequestBody PaymentDTO paymentData) {
+        Payment updatePayment = this.paymentService.update(id,paymentData);
+        return ResponseEntity.ok().body(updatePayment);
+    }
 }

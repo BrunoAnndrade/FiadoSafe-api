@@ -1,10 +1,10 @@
 package com.brunoandrade.fiadosafe.Services;
 
 import com.brunoandrade.fiadosafe.Domain.clients.Client;
-import com.brunoandrade.fiadosafe.Domain.clients.exceptions.ClientNotFoundException;
 import com.brunoandrade.fiadosafe.Domain.payments.Payment;
 import com.brunoandrade.fiadosafe.Domain.payments.PaymentDTO;
-import com.brunoandrade.fiadosafe.Domain.payments.exception.PaymentNotFoundException;
+import com.brunoandrade.fiadosafe.Domain.payments.exception.PaymentMapper;
+import com.brunoandrade.fiadosafe.Domain.payments.PaymentNotFoundException;
 import com.brunoandrade.fiadosafe.repositories.PaymentRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +15,12 @@ public class PaymentService {
 
     private final PaymentRepository paymentRepository;
     private final ClientService clientService;
+    private final PaymentMapper paymentMapper;
 
-    public PaymentService(PaymentRepository paymentRepository, ClientService clientService) {
+    public PaymentService(PaymentRepository paymentRepository, ClientService clientService, PaymentMapper paymentMapper) {
         this.paymentRepository = paymentRepository;
         this.clientService = clientService;
+        this.paymentMapper = paymentMapper;
     }
 
     public Payment insertPayment(PaymentDTO paymentDTO) {
@@ -41,6 +43,25 @@ public class PaymentService {
 
         return newPayment;
     }
+
+    public Payment update(String id, PaymentDTO paymentDTO) {
+        Payment payment = this.paymentRepository
+                .findById(id)
+                .orElseThrow(PaymentNotFoundException::new);
+
+        this.clientService.getById(paymentDTO.clientId())
+                .ifPresent(payment::setClient);
+
+        paymentMapper.updatePaymentFromDTO(paymentDTO, payment);
+
+        this.paymentRepository.save(payment);
+
+        clientService.updateClientDebt(payment.getClient().getId());
+
+        return payment;
+    }
+
+
 
     public List<Payment> getAllPayments(){
         return this.paymentRepository.findAll();
