@@ -5,7 +5,6 @@ import com.brunoandrade.fiadosafe.Domain.clients.ClientDTO;
 import com.brunoandrade.fiadosafe.Domain.clients.ClientMapper;
 import com.brunoandrade.fiadosafe.Domain.clients.exceptions.ClientNotFoundException;
 import com.brunoandrade.fiadosafe.repositories.ClientRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

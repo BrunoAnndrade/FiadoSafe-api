@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Document(collection = "products")
+@Document(collection = "purchases")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -26,7 +26,5 @@ public class Purchase {
         this.productName = data.productName();
         this.price = data.price();
         this.dateOfPurchase = LocalDateTime.now();
-
     }
-
 }

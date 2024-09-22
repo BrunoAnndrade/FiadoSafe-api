@@ -15,8 +15,6 @@ public record ClientDTO(
         String phoneNumber,
         String age,
         String gender,
-        List<Purchase> purchaseList,
-        List<Payment> paymentList,
         Double totalDebt
 ) {
 }

@@ -9,7 +9,6 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Document(collection = "clients")
@@ -29,8 +28,6 @@ public class Client {
     private String phoneNumber;
     private String age;
     private String gender;
-    private List<Purchase> purchasesList;
-    private List<Payment> paymentsList;
     private Double totalDebt;
 
     public Client(ClientDTO clientDTO) {
@@ -43,8 +40,6 @@ public class Client {
         this.phoneNumber = clientDTO.phoneNumber();
         this.age = clientDTO.age();
         this.gender = clientDTO.gender();
-        this.purchasesList = clientDTO.purchaseList();
-        this.paymentsList = clientDTO.paymentList();
         this.totalDebt = clientDTO.totalDebt();
     }
 }

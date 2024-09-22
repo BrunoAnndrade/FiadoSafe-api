@@ -6,7 +6,8 @@ public record PurchaseDTO (
         String productName,
         Double price,
         LocalDateTime purchaseDate,
-        String clientId
+        String clientId,
+        String productId
 ){
 
 }
