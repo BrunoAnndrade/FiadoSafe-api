@@ -39,9 +39,10 @@ public class PurchaseService {
             client.setTotalDebt(0.0);
         }
 
-
-
         this.purchaseRepository.save(newPurchase);
+
+        clientService.updateClientDebt(client.getId());
+
         return newPurchase;
     }
 
@@ -56,9 +57,9 @@ public class PurchaseService {
 
         purchaseMapper.updatePurchaseFromDTO(purchaseData, purchase);
 
-
-
         this.purchaseRepository.save(purchase);
+
+        clientService.updateClientDebt(purchase.getClient().getId());
 
         return purchase;
     }
@@ -71,6 +72,8 @@ public class PurchaseService {
 
 
         this.purchaseRepository.delete(purchase);
+
+        clientService.updateClientDebt(purchase.getClient().getId());
     }
 
     public List<Purchase> getAll() {
