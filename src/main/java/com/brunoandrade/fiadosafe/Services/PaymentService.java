@@ -8,9 +8,11 @@ import com.brunoandrade.fiadosafe.Domain.payments.exception.PaymentNotFoundExcep
 import com.brunoandrade.fiadosafe.repositories.PaymentRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PaymentService {
-    
+
     private final PaymentRepository paymentRepository;
     private final ClientService clientService;
 
@@ -35,6 +37,9 @@ public class PaymentService {
         clientService.updateClientDebt(client.getId());
 
         return newPayment;
+    }
 
+    public List<Payment> getAllPayments(){
+        return this.paymentRepository.findAll();
     }
 }
