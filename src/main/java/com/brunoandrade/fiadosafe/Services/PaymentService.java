@@ -61,6 +61,15 @@ public class PaymentService {
         return payment;
     }
 
+    public void delete(String id) {
+        Payment payment = this.paymentRepository
+                .findById(id)
+                .orElseThrow(PaymentNotFoundException::new);
+
+        this.paymentRepository.delete(payment);
+        clientService.updateClientDebt(payment.getClient().getId());
+    }
+
 
 
     public List<Payment> getAllPayments(){

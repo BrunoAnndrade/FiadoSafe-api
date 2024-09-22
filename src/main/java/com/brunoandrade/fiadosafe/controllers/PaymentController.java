@@ -35,4 +35,11 @@ public class PaymentController {
         Payment updatePayment = this.paymentService.update(id,paymentData);
         return ResponseEntity.ok().body(updatePayment);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deletePayment(@PathVariable("id") String id) {
+        this.paymentService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
