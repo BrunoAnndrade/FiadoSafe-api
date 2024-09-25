@@ -1,5 +1,8 @@
 package com.brunoandrade.fiadosafe.infra.security;
 
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,8 +20,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+@SecurityScheme(
+        name = SecurityConfigurations.SECURITY,
+        type = SecuritySchemeType.HTTP,
+        bearerFormat = "JWT",
+        scheme = "bearer"
+)
+@SecurityRequirement(name = SecurityConfigurations.SECURITY)
 public class SecurityConfigurations {
 
+    public static final String SECURITY = "bearerAuth";
     private final SecurityFilter securityFilter;
 
     @Autowired
@@ -44,6 +55,7 @@ public class SecurityConfigurations {
                         .requestMatchers(HttpMethod.POST, "/api/payment").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/payment").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/api/payment").hasRole("ADMIN")
+                        .requestMatchers("/v3/api-docs/**", "swagger-ui/**","swagger-ui.html").permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
