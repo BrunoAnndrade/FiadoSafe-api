@@ -1,6 +1,6 @@
 package com.brunoandrade.fiadosafe.infra.security;
 
-import com.brunoandrade.fiadosafe.repositories.UserRepository;
+import com.brunoandrade.fiadosafe.infra.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

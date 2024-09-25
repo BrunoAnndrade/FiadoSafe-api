@@ -1,7 +1,7 @@
 package com.brunoandrade.fiadosafe.Services;
 
 import com.brunoandrade.fiadosafe.Domain.clients.Client;
-import com.brunoandrade.fiadosafe.Domain.clients.ClientDTO;
+import com.brunoandrade.fiadosafe.dto.ClientDTO;
 import com.brunoandrade.fiadosafe.Domain.clients.ClientMapper;
 import com.brunoandrade.fiadosafe.Domain.clients.exceptions.ClientNotFoundException;
 import com.brunoandrade.fiadosafe.Domain.payments.Payment;

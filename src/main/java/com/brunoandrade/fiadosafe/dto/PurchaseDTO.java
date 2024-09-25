@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.Domain.purchases;
+package com.brunoandrade.fiadosafe.dto;
 
 import java.time.LocalDateTime;
 

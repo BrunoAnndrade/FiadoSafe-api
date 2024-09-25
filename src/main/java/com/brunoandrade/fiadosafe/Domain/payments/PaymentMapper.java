@@ -1,7 +1,6 @@
-package com.brunoandrade.fiadosafe.Domain.payments.exception;
+package com.brunoandrade.fiadosafe.Domain.payments;
 
-import com.brunoandrade.fiadosafe.Domain.payments.Payment;
-import com.brunoandrade.fiadosafe.Domain.payments.PaymentDTO;
+import com.brunoandrade.fiadosafe.dto.PaymentDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 

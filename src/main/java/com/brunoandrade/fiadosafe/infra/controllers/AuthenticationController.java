@@ -1,11 +1,11 @@
-package com.brunoandrade.fiadosafe.controllers;
+package com.brunoandrade.fiadosafe.infra.controllers;
 
-import com.brunoandrade.fiadosafe.Domain.user.AuthenticationDTO;
-import com.brunoandrade.fiadosafe.Domain.user.LoginResponseDTO;
-import com.brunoandrade.fiadosafe.Domain.user.RegisterDTO;
-import com.brunoandrade.fiadosafe.Domain.user.User;
+import com.brunoandrade.fiadosafe.infra.dto.AuthenticationDTO;
+import com.brunoandrade.fiadosafe.infra.dto.LoginResponseDTO;
+import com.brunoandrade.fiadosafe.infra.dto.RegisterDTO;
+import com.brunoandrade.fiadosafe.infra.domain.User;
 import com.brunoandrade.fiadosafe.infra.security.TokenService;
-import com.brunoandrade.fiadosafe.repositories.UserRepository;
+import com.brunoandrade.fiadosafe.infra.repositories.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

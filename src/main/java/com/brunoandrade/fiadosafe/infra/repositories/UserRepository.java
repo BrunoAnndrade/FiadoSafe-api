@@ -1,6 +1,6 @@
-package com.brunoandrade.fiadosafe.repositories;
+package com.brunoandrade.fiadosafe.infra.repositories;
 
-import com.brunoandrade.fiadosafe.Domain.user.User;
+import com.brunoandrade.fiadosafe.infra.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 

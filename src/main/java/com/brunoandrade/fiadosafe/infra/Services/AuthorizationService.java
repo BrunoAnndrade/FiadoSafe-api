@@ -1,6 +1,6 @@
-package com.brunoandrade.fiadosafe.Services;
+package com.brunoandrade.fiadosafe.infra.Services;
 
-import com.brunoandrade.fiadosafe.repositories.UserRepository;
+import com.brunoandrade.fiadosafe.infra.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

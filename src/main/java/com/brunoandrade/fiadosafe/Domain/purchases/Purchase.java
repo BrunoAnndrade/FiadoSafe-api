@@ -1,6 +1,7 @@
 package com.brunoandrade.fiadosafe.Domain.purchases;
 
 import com.brunoandrade.fiadosafe.Domain.clients.Client;
+import com.brunoandrade.fiadosafe.dto.PurchaseDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

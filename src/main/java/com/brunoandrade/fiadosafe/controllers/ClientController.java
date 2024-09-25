@@ -2,7 +2,7 @@ package com.brunoandrade.fiadosafe.controllers;
 
 import com.brunoandrade.fiadosafe.Services.ClientService;
 import com.brunoandrade.fiadosafe.Domain.clients.Client;
-import com.brunoandrade.fiadosafe.Domain.clients.ClientDTO;
+import com.brunoandrade.fiadosafe.dto.ClientDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

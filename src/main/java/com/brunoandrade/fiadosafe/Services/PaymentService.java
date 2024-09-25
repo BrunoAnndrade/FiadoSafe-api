@@ -2,9 +2,9 @@ package com.brunoandrade.fiadosafe.Services;
 
 import com.brunoandrade.fiadosafe.Domain.clients.Client;
 import com.brunoandrade.fiadosafe.Domain.payments.Payment;
-import com.brunoandrade.fiadosafe.Domain.payments.PaymentDTO;
-import com.brunoandrade.fiadosafe.Domain.payments.exception.PaymentMapper;
-import com.brunoandrade.fiadosafe.Domain.payments.PaymentNotFoundException;
+import com.brunoandrade.fiadosafe.dto.PaymentDTO;
+import com.brunoandrade.fiadosafe.Domain.payments.PaymentMapper;
+import com.brunoandrade.fiadosafe.Domain.payments.exception.PaymentNotFoundException;
 import com.brunoandrade.fiadosafe.repositories.PaymentRepository;
 import org.springframework.stereotype.Service;
 

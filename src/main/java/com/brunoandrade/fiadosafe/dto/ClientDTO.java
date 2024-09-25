@@ -1,9 +1,4 @@
-package com.brunoandrade.fiadosafe.Domain.clients;
-
-import com.brunoandrade.fiadosafe.Domain.payments.Payment;
-import com.brunoandrade.fiadosafe.Domain.purchases.Purchase;
-
-import java.util.List;
+package com.brunoandrade.fiadosafe.dto;
 
 public record ClientDTO(
         String name,

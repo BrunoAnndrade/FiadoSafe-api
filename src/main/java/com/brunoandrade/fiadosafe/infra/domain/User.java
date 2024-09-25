@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.Domain.user;
+package com.brunoandrade.fiadosafe.infra.domain;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

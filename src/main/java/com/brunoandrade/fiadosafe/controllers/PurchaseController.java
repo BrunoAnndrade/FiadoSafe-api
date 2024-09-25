@@ -1,7 +1,7 @@
 package com.brunoandrade.fiadosafe.controllers;
 
 import com.brunoandrade.fiadosafe.Domain.purchases.Purchase;
-import com.brunoandrade.fiadosafe.Domain.purchases.PurchaseDTO;
+import com.brunoandrade.fiadosafe.dto.PurchaseDTO;
 import com.brunoandrade.fiadosafe.Services.PurchaseService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

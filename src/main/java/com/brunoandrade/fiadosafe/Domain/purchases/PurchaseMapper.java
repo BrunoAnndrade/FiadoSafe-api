@@ -1,7 +1,6 @@
 package com.brunoandrade.fiadosafe.Domain.purchases;
 
-import com.brunoandrade.fiadosafe.Domain.clients.Client;
-import com.brunoandrade.fiadosafe.Domain.clients.ClientDTO;
+import com.brunoandrade.fiadosafe.dto.PurchaseDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 

@@ -1,5 +1,6 @@
 package com.brunoandrade.fiadosafe.Domain.clients;
 
+import com.brunoandrade.fiadosafe.dto.ClientDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
