@@ -1,8 +1,8 @@
 package com.brunoandrade.fiadosafe.controllers;
 
-import com.brunoandrade.fiadosafe.Domain.payments.Payment;
+import com.brunoandrade.fiadosafe.domains.payments.Payment;
 import com.brunoandrade.fiadosafe.dto.PaymentDTO;
-import com.brunoandrade.fiadosafe.Services.PaymentService;
+import com.brunoandrade.fiadosafe.services.PaymentService;
 import com.brunoandrade.fiadosafe.infra.security.SecurityConfigurations;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

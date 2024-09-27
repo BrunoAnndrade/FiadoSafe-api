@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.Domain.clients;
+package com.brunoandrade.fiadosafe.domains.clients;
 
 import com.brunoandrade.fiadosafe.dto.ClientDTO;
 import lombok.Getter;

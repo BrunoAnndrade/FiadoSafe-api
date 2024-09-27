@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.Domain.purchases;
+package com.brunoandrade.fiadosafe.domains.purchases;
 
 import com.brunoandrade.fiadosafe.dto.PurchaseDTO;
 import org.mapstruct.Mapper;

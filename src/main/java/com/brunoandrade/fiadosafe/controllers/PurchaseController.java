@@ -1,8 +1,8 @@
 package com.brunoandrade.fiadosafe.controllers;
 
-import com.brunoandrade.fiadosafe.Domain.purchases.Purchase;
+import com.brunoandrade.fiadosafe.domains.purchases.Purchase;
 import com.brunoandrade.fiadosafe.dto.PurchaseDTO;
-import com.brunoandrade.fiadosafe.Services.PurchaseService;
+import com.brunoandrade.fiadosafe.services.PurchaseService;
 import com.brunoandrade.fiadosafe.infra.security.SecurityConfigurations;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

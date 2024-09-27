@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.Domain.payments;
+package com.brunoandrade.fiadosafe.domains.payments;
 
 import com.brunoandrade.fiadosafe.dto.PaymentDTO;
 import org.mapstruct.Mapper;

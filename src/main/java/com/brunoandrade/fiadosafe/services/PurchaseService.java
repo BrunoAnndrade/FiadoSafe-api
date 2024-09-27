@@ -1,12 +1,12 @@
-package com.brunoandrade.fiadosafe.Services;
+package com.brunoandrade.fiadosafe.services;
 
-import com.brunoandrade.fiadosafe.Domain.clients.Client;
+import com.brunoandrade.fiadosafe.domains.clients.Client;
 
-import com.brunoandrade.fiadosafe.Domain.clients.exceptions.ClientNotFoundException;
-import com.brunoandrade.fiadosafe.Domain.purchases.Purchase;
+import com.brunoandrade.fiadosafe.domains.clients.exceptions.ClientNotFoundException;
+import com.brunoandrade.fiadosafe.domains.purchases.Purchase;
 import com.brunoandrade.fiadosafe.dto.PurchaseDTO;
-import com.brunoandrade.fiadosafe.Domain.purchases.PurchaseMapper;
-import com.brunoandrade.fiadosafe.Domain.purchases.exceptions.PurchaseNotFoundException;
+import com.brunoandrade.fiadosafe.domains.purchases.PurchaseMapper;
+import com.brunoandrade.fiadosafe.domains.purchases.exceptions.PurchaseNotFoundException;
 import com.brunoandrade.fiadosafe.repositories.PurchaseRepository;
 import org.springframework.stereotype.Service;
 

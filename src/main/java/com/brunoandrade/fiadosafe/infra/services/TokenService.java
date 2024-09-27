@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.infra.Services;
+package com.brunoandrade.fiadosafe.infra.services;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

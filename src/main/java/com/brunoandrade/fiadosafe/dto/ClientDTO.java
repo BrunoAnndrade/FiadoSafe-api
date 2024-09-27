@@ -11,5 +11,4 @@ public record ClientDTO(
         String age,
         String gender,
         Double totalDebt
-) {
-}
+) {}

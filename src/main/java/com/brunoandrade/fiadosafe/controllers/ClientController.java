@@ -1,7 +1,7 @@
 package com.brunoandrade.fiadosafe.controllers;
 
-import com.brunoandrade.fiadosafe.Services.ClientService;
-import com.brunoandrade.fiadosafe.Domain.clients.Client;
+import com.brunoandrade.fiadosafe.services.ClientService;
+import com.brunoandrade.fiadosafe.domains.clients.Client;
 import com.brunoandrade.fiadosafe.dto.ClientDTO;
 import com.brunoandrade.fiadosafe.infra.security.SecurityConfigurations;
 import io.swagger.v3.oas.annotations.Operation;

@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.infra.Services;
+package com.brunoandrade.fiadosafe.infra.services;
 
 import com.brunoandrade.fiadosafe.infra.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

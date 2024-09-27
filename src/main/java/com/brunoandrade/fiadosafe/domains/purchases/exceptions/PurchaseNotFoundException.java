@@ -1,4 +1,4 @@
-package com.brunoandrade.fiadosafe.Domain.purchases.exceptions;
+package com.brunoandrade.fiadosafe.domains.purchases.exceptions;
 
 public class PurchaseNotFoundException extends RuntimeException {
 }

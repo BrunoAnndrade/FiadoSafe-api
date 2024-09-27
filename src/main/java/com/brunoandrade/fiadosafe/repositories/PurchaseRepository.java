@@ -1,9 +1,8 @@
 package com.brunoandrade.fiadosafe.repositories;
 
-import com.brunoandrade.fiadosafe.Domain.purchases.Purchase;
+import com.brunoandrade.fiadosafe.domains.purchases.Purchase;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

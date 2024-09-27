@@ -1,11 +1,11 @@
-package com.brunoandrade.fiadosafe.Services;
+package com.brunoandrade.fiadosafe.services;
 
-import com.brunoandrade.fiadosafe.Domain.clients.Client;
+import com.brunoandrade.fiadosafe.domains.clients.Client;
 import com.brunoandrade.fiadosafe.dto.ClientDTO;
-import com.brunoandrade.fiadosafe.Domain.clients.ClientMapper;
-import com.brunoandrade.fiadosafe.Domain.clients.exceptions.ClientNotFoundException;
-import com.brunoandrade.fiadosafe.Domain.payments.Payment;
-import com.brunoandrade.fiadosafe.Domain.purchases.Purchase;
+import com.brunoandrade.fiadosafe.domains.clients.ClientMapper;
+import com.brunoandrade.fiadosafe.domains.clients.exceptions.ClientNotFoundException;
+import com.brunoandrade.fiadosafe.domains.payments.Payment;
+import com.brunoandrade.fiadosafe.domains.purchases.Purchase;
 import com.brunoandrade.fiadosafe.repositories.ClientRepository;
 import com.brunoandrade.fiadosafe.repositories.PaymentRepository;
 import com.brunoandrade.fiadosafe.repositories.PurchaseRepository;

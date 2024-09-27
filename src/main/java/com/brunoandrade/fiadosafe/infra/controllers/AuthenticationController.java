@@ -4,7 +4,7 @@ import com.brunoandrade.fiadosafe.infra.dto.AuthenticationDTO;
 import com.brunoandrade.fiadosafe.infra.dto.LoginResponseDTO;
 import com.brunoandrade.fiadosafe.infra.dto.RegisterDTO;
 import com.brunoandrade.fiadosafe.infra.domain.User;
-import com.brunoandrade.fiadosafe.infra.Services.TokenService;
+import com.brunoandrade.fiadosafe.infra.services.TokenService;
 import com.brunoandrade.fiadosafe.infra.repositories.UserRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

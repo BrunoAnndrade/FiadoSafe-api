@@ -1,6 +1,6 @@
-package com.brunoandrade.fiadosafe.Domain.purchases;
+package com.brunoandrade.fiadosafe.domains.purchases;
 
-import com.brunoandrade.fiadosafe.Domain.clients.Client;
+import com.brunoandrade.fiadosafe.domains.clients.Client;
 import com.brunoandrade.fiadosafe.dto.PurchaseDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
