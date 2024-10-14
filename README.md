@@ -37,7 +37,8 @@ Antes de iniciar a instalação, certifique-se de ter os seguintes componentes i
 ### Acessando a API
 
 1. **Autenticação**
-   - Registrar um usuário
+   - Utilize o endpoint `/auth/register` para registrar o usuário.
+   - Envie uma requisição `POST` para `/auth/register` com o seguinte corpo JSON
      ```json
      {
        "login": "ADMINISTRADOR"
