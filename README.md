@@ -29,8 +29,8 @@ Antes de iniciar a instalação, certifique-se de ter os seguintes componentes i
 
 ### Passo a Passo
 
-1- Clone o repositório.
-2- Certifique-se de que o MongoDB Compass esteja rodando localmente mongodb://localhost:27017/Fiado-Safe.
+- Clone o repositório.
+- Certifique-se de que o MongoDB Compass esteja rodando localmente mongodb://localhost:27017/Fiado-Safe.
 
 ## Instruções de Uso Localmente
 
@@ -40,7 +40,7 @@ Antes de iniciar a instalação, certifique-se de ter os seguintes componentes i
    - Registrar um usuário
      ```json
      {
-       "login": "ADMINISTRADO
+       "login": "ADMINISTRADOR"
        "password": "123456789",
        "role": "ADMIN"
      }
