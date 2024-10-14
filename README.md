@@ -60,35 +60,33 @@ Antes de iniciar a instalação, certifique-se de ter os seguintes componentes i
      ```
 
 3. **Gerenciamento de Clientes**
-   - **Listar Clientes**: `GET /api/client` (Requer a função `ADMIN` ou `USER`).
-   - **Adicionar Cliente**: `POST /api/client`
-     - Requer a função `ADMIN`.
-   - **Atualizar Cliente**: `PUT /api/client`
-     - Requer a função `ADMIN`.
-   - **Deletar Cliente**: `DELETE /api/client`
-     - Requer a função `ADMIN`.
+   
+- OBS: Requisicoes POST, PUT e DELETE requer que o usuário seja ADMIN
+  
+   - **Listar Clientes**: `GET /api/client` .
+   - **Adicionar Cliente**: `POST /api/client` .
+   - **Atualizar Cliente**: `PUT /api/client` .
+   - **Deletar Cliente**: `DELETE /api/client` .
 
-4. **Gerenciamento de Compras**
-   - **Listar Compras**: `GET /api/purchase`
-     - Requer a função `ADMIN` ou `USER`.
-   - **Adicionar Compra**: `POST /api/purchase`
-     - Requer a função `ADMIN`.
+5. **Gerenciamento de Compras**
+
+- OBS: Requisicoes POST, PUT e DELETE requer que o usuário seja ADMIN
+  
+   - **Listar Compras**: `GET /api/purchase` .
+   - **Adicionar Compra**: `POST /api/purchase` 
    - **Atualizar Compra**: `PUT /api/purchase`
-     - Requer a função `ADMIN`.
    - **Deletar Compra**: `DELETE /api/purchase`
-     - Requer a função `ADMIN`.
 
-5. **Gerenciamento de Pagamentos**
+7. **Gerenciamento de Pagamentos**
+
+- OBS: Requisicoes POST, PUT e DELETE requer que o usuário seja ADMIN
+
    - **Listar Pagamentos**: `GET /api/payment`
-     - Requer a função `ADMIN` ou `USER`.
    - **Adicionar Pagamento**: `POST /api/payment`
-     - Requer a função `ADMIN`.
    - **Atualizar Pagamento**: `PUT /api/payment`
-     - Requer a função `ADMIN`.
    - **Deletar Pagamento**: `DELETE /api/payment`
-     - Requer a função `ADMIN`.
 
-6. **Acessando a Documentação Swagger**
+9. **Acessando a Documentação Swagger**
    - Acesse a documentação interativa da API em [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
    - A interface Swagger permite testar os endpoints e visualizar os detalhes das requisições.
 
