@@ -60,8 +60,7 @@ Antes de iniciar a instalação, certifique-se de ter os seguintes componentes i
      ```
 
 3. **Gerenciamento de Clientes**
-   - **Listar Clientes**: `GET /api/client`
-     - Requer a função `ADMIN` ou `USER`.
+   - **Listar Clientes**: `GET /api/client` (Requer a função `ADMIN` ou `USER`).
    - **Adicionar Cliente**: `POST /api/client`
      - Requer a função `ADMIN`.
    - **Atualizar Cliente**: `PUT /api/client`
