@@ -23,7 +23,8 @@ O objetivo é fornecer uma solução de gerenciamento de dívidas e pagamentos q
 
 ![Java11](https://img.shields.io/badge/Java-11%2B-blue)
 ![Maven3.6+](https://img.shields.io/badge/Maven-3.6+-blue)
-![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white) Opcional
+
+- Docker é opcional caso queira rodar em container.
 
 ### Passo a Passo
 
