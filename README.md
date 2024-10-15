@@ -5,12 +5,12 @@
 FiadoSafe é uma API desenvolvida para gerenciar o sistema de contas "fiado" de forma segura e eficiente. O sistema permite gerenciar clientes, compras, pagamentos e dívidas de maneira fácil, com suporte a autenticação e autorização utilizando JWT. 
 
 ### Construído com
-- **Java 11** 
-- **Spring Boot** 
-- **MongoDB**
-- **JWT (JSON Web Tokens)** 
-- **Swagger** 
-- **Docker** 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 
 ### Por que FiadoSafe?
 O objetivo é fornecer uma solução de gerenciamento de dívidas e pagamentos que seja simples de usar, mas que também garanta segurança e escalabilidade. Com a API, pequenos comerciantes podem manter o controle de contas pendentes e gerenciar melhor suas finanças.
@@ -20,6 +20,8 @@ O objetivo é fornecer uma solução de gerenciamento de dívidas e pagamentos q
 ## Instruções de Instalação
 
 ### Pré-requisitos
+
+https://img.shields.io/badge/Java-11%2B-blue
 
 Antes de iniciar a instalação, certifique-se de ter os seguintes componentes instalados no seu sistema:
 - **Java 11** ou superior
