@@ -22,12 +22,8 @@ O objetivo é fornecer uma solução de gerenciamento de dívidas e pagamentos q
 ### Pré-requisitos
 
 ![Java11](https://img.shields.io/badge/Java-11%2B-blue)
-
-Antes de iniciar a instalação, certifique-se de ter os seguintes componentes instalados no seu sistema:
-- **Java 11** ou superior
-- **Maven 3.6+** (para gerenciamento de dependências)
-- **Docker** (opcional, mas recomendado para rodar a aplicação em container)
-- **Git** (para clonar o repositório)
+![Maven3.6+](https://img.shields.io/badge/Maven-3.6+-blue)
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white) Opcional
 
 ### Passo a Passo
 
