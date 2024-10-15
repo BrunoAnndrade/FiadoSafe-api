@@ -100,4 +100,4 @@ To access protected endpoints as an ADMIN user, provide the appropriate authenti
 
 ![MT LICENCE](https://img.shields.io/badge/license-MIT-blue)
 
-## Contact: Bruno Andrade (follow me on [Linkedin](https://www.linkedin.com/in/brunoanndrad/))
+## Contact: [Linkedin](https://www.linkedin.com/in/brunoanndrad/)
