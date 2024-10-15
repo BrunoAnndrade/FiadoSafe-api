@@ -1,10 +1,9 @@
 # FiadoSafe-API
 
-## Descrição
+## Description
 
-FiadoSafe é uma API desenvolvida para gerenciar o sistema de contas "fiado" de forma segura e eficiente. O sistema permite gerenciar clientes, compras, pagamentos e dívidas de maneira fácil, com suporte a autenticação e autorização utilizando JWT. 
+FiadoSafe is an API developed to securely and efficiently manage the "fiado" credit account system. The system allows for easy management of customers, purchases, payments, and debts, with support for authentication and authorization using JWT.
 
-### Construído com
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -12,108 +11,93 @@ FiadoSafe é uma API desenvolvida para gerenciar o sistema de contas "fiado" de 
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 
-### Por que FiadoSafe?
-O objetivo é fornecer uma solução de gerenciamento de dívidas e pagamentos que seja simples de usar, mas que também garanta segurança e escalabilidade. Com a API, pequenos comerciantes podem manter o controle de contas pendentes e gerenciar melhor suas finanças.
+### Why FiadoSafe?
+
+The goal is to provide a debt and payment management solution that is easy to use while also ensuring security and scalability. With the API, small business owners can keep track of outstanding accounts and better manage their finances.
 
 ---
 
-## Instruções de Instalação
+## Installation
 
-### Pré-requisitos
+### Prerequisites 
 
 ![Java11](https://img.shields.io/badge/Java-11-blue)
 ![Maven3.9.9](https://img.shields.io/badge/Maven-3.9.9-blue)
 
 - Docker é opcional caso queira rodar em container.
 
-### Passo a Passo
+1. Clone the repository:
+   
+```bash
+git clone https://github.com/your-username/project-name.git
+```
 
-- Clone o repositório.
-- Certifique-se de que o MongoDB Compass esteja rodando localmente em mongodb://localhost:27017/Fiado-Safe.
+2. Install dependencies with Maven
+3. Install [MongoCompass](https://www.mongodb.com/try/download/compass)
+   
+### Accessing the API
 
-## Instruções de Uso Localmente
+- Start the application with Maven
+- Make sure that MongoDB Compass is running locally at mongodb://localhost:27017/Fiado-Safe.
 
-### Acessando a API
+1. **Authentication**
+The API uses Spring Security for authentication control. The following roles are available:
 
-1. **Autenticação**
-   - Utilize o endpoint `/auth/register` para registrar o usuário.
-   - Envie uma requisição `POST` para `/auth/register` com o seguinte corpo JSON
-     ```json
+```
+ROLE_USER - Standard user role for logged-in users.
+ROLE_ADMIN - Admin role for managing partners (registering new partners).
+```
+To access protected endpoints as an ADMIN user, provide the appropriate authentication credentials in the request header.
+
+```json
      {
        "login": "ADMINISTRADOR"
        "password": "123456789",
        "role": "ADMIN"
      }
-     ```
-   - Para acessar os endpoints protegidos, você deve primeiro obter um token JWT.
-   - Utilize o endpoint `/auth/login` para autenticar e obter o token.
-   - Envie uma requisição `POST` para `/auth/login` com o seguinte corpo JSON:
-     ```json
+```
+- To access the protected endpoints, you must first obtain a JWT token.
+- Use the /auth/login endpoint to authenticate and obtain the token.
+- Send a POST request to /auth/login with the following JSON body: 
+ ```json
      {
-       "login": "seu_usuario",
-       "password": "sua_senha"
+       "login": "user",
+       "password": "password"
      }
-     ```
-   - O token JWT será retornado na resposta. Guarde-o e adicione-o aos cabeçalhos das suas requisições para autenticar as próximas chamadas:
-     ```
-     Authorization: Bearer <seu_token>
-     ```
+```
+- The JWT token will be returned in the response. Store it and add it to the headers of your requests to authenticate subsequent calls:
+ ```
+     Authorization: Bearer <token>
+```
+- NOTE: POST, PUT, and DELETE requests require the user to be ADMIN
 
-3. **Gerenciamento de Clientes**
+3. **Clients Management**
    
-- OBS: Requisicoes POST, PUT e DELETE requer que o usuário seja ADMIN
+   - **List Clients**: `GET /api/client` .
+   - **Add Client**: `POST /api/client` .
+   - **Update Client**: `PUT /api/client` .
+   - **Delete Client**: `DELETE /api/client` .
+
+5. **Purchases Management**
   
-   - **Listar Clientes**: `GET /api/client` .
-   - **Adicionar Cliente**: `POST /api/client` .
-   - **Atualizar Cliente**: `PUT /api/client` .
-   - **Deletar Cliente**: `DELETE /api/client` .
+   - **List Purchases**: `GET /api/purchase` .
+   - **Add Purchase**: `POST /api/purchase` 
+   - **Update Purchase**: `PUT /api/purchase`
+   - **Delete Purchase**: `DELETE /api/purchase`
 
-5. **Gerenciamento de Compras**
+7. **Payments Management**
 
-- OBS: Requisicoes POST, PUT e DELETE requer que o usuário seja ADMIN
-  
-   - **Listar Compras**: `GET /api/purchase` .
-   - **Adicionar Compra**: `POST /api/purchase` 
-   - **Atualizar Compra**: `PUT /api/purchase`
-   - **Deletar Compra**: `DELETE /api/purchase`
+   - **List Payments**: `GET /api/payment`
+   - **Add Payment**: `POST /api/payment`
+   - **Update Payment**: `PUT /api/payment`
+   - **Delete Payment**: `DELETE /api/payment`
 
-7. **Gerenciamento de Pagamentos**
-
-- OBS: Requisicoes POST, PUT e DELETE requer que o usuário seja ADMIN
-
-   - **Listar Pagamentos**: `GET /api/payment`
-   - **Adicionar Pagamento**: `POST /api/payment`
-   - **Atualizar Pagamento**: `PUT /api/payment`
-   - **Deletar Pagamento**: `DELETE /api/payment`
-
-9. **Acessando a Documentação Swagger**
-   - Acesse a documentação interativa da API em [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
-   - A interface Swagger permite testar os endpoints e visualizar os detalhes das requisições.
+9. **Accessing the Swagger Documentation**
+   - Access the interactive API documentation at [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
+   - The Swagger interface allows you to test the endpoints and view the details of the requests
 
 ---
 
-Essas instruções garantem que os usuários possam configurar e usar a API "FiadoSafe" com facilidade, seguindo o formato organizado do `README.md`.
+![MT LICENCE](https://img.shields.io/badge/license-MIT-blue)
 
-
-
-MIT License
-
-Copyright (c) 2024 Bruno Andrade
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+##Contact: Bruno Andrade (follow me on [Linkedin](https://www.linkedin.com/in/brunoanndrad/))
