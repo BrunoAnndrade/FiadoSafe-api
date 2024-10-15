@@ -21,7 +21,7 @@ O objetivo é fornecer uma solução de gerenciamento de dívidas e pagamentos q
 
 ### Pré-requisitos
 
-https://img.shields.io/badge/Java-11%2B-blue
+![Java11](https://img.shields.io/badge/Java-11%2B-blue)
 
 Antes de iniciar a instalação, certifique-se de ter os seguintes componentes instalados no seu sistema:
 - **Java 11** ou superior
